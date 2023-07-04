@@ -4,8 +4,11 @@ const cors = require("cors");
 const port = process.env.PORT || 3000;
 const userControls  = require("./controllers/studentController.js");
 const app = express();
-require("dotenv").config();
-mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster.ps21nca.mongodb.net/?retryWrites=true&w=majority`,{
+
+mongoose.connect(
+{/* <MONGO DB DATABASE URL GOES HERE> */}
+,
+{
     useNewUrlParser:true,
     useUnifiedTopology:true
 }).catch(err=>{
